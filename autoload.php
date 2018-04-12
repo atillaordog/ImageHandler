@@ -9,9 +9,9 @@ if (!defined('IMAGEHANDLER_ROOT')) {
     define('IMAGEHANDLER_ROOT', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 }
 
-spl_autoload_register('autoload');
+spl_autoload_register('imagehandler_autoload');
 
-function autoload($class)
+function imagehandler_autoload($class)
 {	
 	if ( class_exists($class,FALSE) ) {
 		// Already loaded
